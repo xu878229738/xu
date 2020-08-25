@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>地图</title>
+	<script src="js/echarts-en.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/data.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div id="map" style="width: 200px;height: 200px"></div>
+</body>
+</html>
+<script type="text/javascript">
+   var map = echarts.init(document.getElementById('map'));
+     echarts.registerMap('随便', data);
+   var option={
+	   // title 是标题   里面有格式
+	      title:{
+	               top:'50%',
+	               left: '10%',
+				   left: 'center', // 居中显示，可设置数值
+	               subtextStyle: {color: '#000000'},
+	               text:'主标题',
+	               subtext: '副标题',
+				   textStyle:{
+				             color: '#e57373',
+				             fontWeight: 'normal',
+				             fontSize: 20,
+				             lineHeight: 30
+				              },
+				   subtextStyle:{
+				              color: '#42a5f5',
+				              fontSize: 15
+				              },
+	            },
+				 // 
+	      geo:{
+				// 地图组件配置
+		        map: '随便', // 选择地图
+		        label: { // 绑定文本的设置
+		                emphasis: { // 选中板块的配置，api与normal相同
+		                show: true, // 是否显示文本
+		                color: '#000',
+		                  },
+						formatter: function (a){
+						 console.log(a)
+					     return a.name
+						} // 标签显示内容,字符创与函数两种格式,附带多种变量用法↓
+						                  // https://echarts.apache.org/zh/option.html#geo.label.formatter
+		               },
+		               itemStyle: { // 选中板块配置
+		                   normal: { // 初始样式
+		                       areaColor: '#323c48', // 地图颜色
+		                       borderColor: '#020', //线条颜色
+		                       borderType: 'dotted', //边框样式
+		                       opacity: '0.5'
+		                   },
+		                   emphasis: { //选中某块地图之后
+		                       areaColor: '#fff' //鼠标移入颜色
+		                   }
+		               },
+		             
+		               selectedMode: 'single', //点击板块会高亮选中板块，默认多选可选'single'表示单选，或者'multiple'表示多选  空的的话 是不选
+					   roam:true,         //缩放 放大
+		           },
+					   
+			
+	   
+	   
+   }
+     // 地图点击事件
+       map.setOption(option);
+	      map.on('click', function (params) {
+	          console.log(params);
+	           //逻辑控制
+	      });
+
+</script>
