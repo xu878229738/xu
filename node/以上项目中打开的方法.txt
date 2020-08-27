@@ -1,0 +1,3 @@
+1.文件夹 node中project1对应  web中的project1的html   里面有关于mysql的连接   和 post get的用法  
+2.文件夹node 中mysql 中记录连接的数据库 增删改查数据库
+3.JSON_exls文件  是将json格式转换成 exls 表格文件

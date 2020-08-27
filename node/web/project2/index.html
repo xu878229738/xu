@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span>姓名：</span><input type="text" name="name" value="">
+    </div>
+    <div>
+        <span>年龄：</span><input type="text" name="age" value="">
+    </div>
+    <div>
+        <span>性别：</span> <span>男</span><input type="radio" name="sex" value="男">
+        <span>女</span><input type="radio" name="sex" value="女">
+    </div>
+    <div>
+        <button id="btn">发送GET请求</button>
+    </div>
+    <script src="./jquery-2.1.0.js"></script>
+    <script>
+        $('#btn').click(() => {
+            //读取表单
+            var name = $('input[name=name]').val();
+            var age = $('input[name=age]').val();
+            var sex = $('input[name=sex]:checked').val();
+            //发送请求
+            $.get('http://localhost:6060/addStudent',{
+                name,
+                age,
+                sex
+            },(data) => {
+                if(data == 'ok'){
+                    alert('恭喜，添加成功！');
+                }else{
+                    alert('对不起，服务器错误');
+                }
+            })
+        })
+    </script>
+</body>
+</html>
