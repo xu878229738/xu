@@ -1,0 +1,5 @@
+1. Chrome浏览器官网安装85版本的 最新默认安装
+2.可以npm install chromedriver --save 安装驱动   或者去官网上下一个 https://chromedriver.storage.googleapis.com/index.html  将文件放在  chrom文件夹了  设置环境变量
+3.安装selenium       npm install selenium-webdriver --save
+4.最麻烦的是总是报chrom未发现  有三个步骤，第一浏览器用最新，npm  chromdriver   第二下载chromdriver    将文件放在  chrom文件夹了  设置环境变量
+ 以上重启电脑一下 就好了
