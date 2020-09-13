@@ -1,0 +1,169 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.bottom {
+	width: 100%;
+}
+
+.TopBackground {
+
+	height: 790px;
+}
+
+.toplogo img {
+	float: left;
+	margin-left: 340px;
+	width: 70px;
+	margin-top: 10px;
+}
+
+.toplogo {
+	overflow: hidden;
+}
+
+.toplogo p {
+	float: left;
+	padding: 0 20px;
+	line-height: 80px;
+	font-size: 1.125em;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.toplogo p:hover {
+	background-color: #FE742C;
+	color: #fff;
+}
+
+.toplogo {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+.swiper-container {
+	width: 100%;
+}
+
+.middlePicture {
+	width: 100%;
+	height: 305px;
+}
+
+.middlePictureTwo {
+	width: 100%;
+}
+
+.BackgroundPicture {
+	width: 100%;
+	height: 600px;
+	position: relative;
+	background: #fff;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position-x: 50%;
+}
+
+.circle {
+	background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2018/linearbot.png) repeat-x left top;
+	bottom: 0 !important;
+	height: 50px;
+}
+
+.middlePictureTwo img {
+	vertical-align: top;
+	width: 100%;
+}
+
+.recordsRome {
+	background-color: #000000;
+	width: 100%;
+	height: 350px;
+}
+
+.toprecords {
+	display:flex;
+	margin: 0 auto;
+	width: 1000px;
+	padding-bottom:30px;
+	border-bottom:solid 1px #666;
+	margin-bottom: 20px;
+}
+
+.typeTitle {
+	color: #666;
+	font-size: 14px;
+}
+
+.recordsRome {
+	padding-top: 30px;
+}
+
+.type {
+	height:150px;
+}
+
+.category {
+	margin-left:50px;
+	display:flex;
+	justify-content:space-around;
+	width: 560px;
+	
+}
+.categoryUl{
+margin-left: 10px;	
+}
+.categoryUl a{
+	display: block;
+	text-decoration:none;
+	color: #979797;
+	font-size: 12px;
+	margin-top: 5px;
+	margin-left:5px;
+}
+.categoryUl ul{
+	display: flex;
+	flex-direction:column;
+	flex-wrap:wrap;
+	height: 150px;
+}
+.categoryUl p{
+	    height: 25px;
+	    color: #666;
+	    font-size: 14px;
+}
+.typeA {
+	margin-top: 30px;
+}
+.typeA a{
+	background-image:url(../img/plats1.png);
+	padding-top:60px;
+	display: inline-block;
+	margin-right:40px;
+	list-style: none;
+	text-decoration:none;
+	color: #979797;
+	font-size: 14px;
+}
+.typeA a:nth-child(1){
+	background-position:-5px 0;
+}
+.typeA a:nth-child(2){
+	background-position:-322px 0;
+}
+.typeA a:nth-child(3){
+	background-position:-120px 0;
+}
+.typeA a:nth-child(4){
+	background-position:-230px 0;
+}
+.records p{
+	    text-align: center;
+	    color: #666;
+		font-size: 12px;
+}
+

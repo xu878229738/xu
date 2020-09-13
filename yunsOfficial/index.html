@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+	<script src="js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="./css/index.css" />
+	<body>
+		<div class="bottom">
+			<!-- 最上轮播背景-->
+			<div class="TopBackground swiper-container">
+				<div class="swiper-wrapper">
+					<div style="background: transparent url(img/app/xiu6.gif)no-repeat;background-size: cover;" class="swiper-slide">
+					</div>
+					<div style="background: transparent url(img/app/xiu7.gif)no-repeat;background-size: cover;" class="swiper-slide">
+					</div>
+				</div>
+
+				<div class="swiper-pagination circle"></div>
+
+			</div>
+			<!-- 最上切换首页logo等 -->
+			<div class="toplogo">
+				<img src="./img/5ec778cb7b567.png">
+				<p>首页</p>
+				<p>下载</p>
+				<p>动态</p>
+				<p>企业</p>
+			</div>
+			<!-- 中间标语 -->
+			<div class="circulationRome">
+
+				<div class="middlePictureTwo">
+					<img src="img/app/xiu8.gif">
+				</div>
+				<div style=" background-image: url(./img/bei1.jpg);" class="BackgroundPicture">
+
+				</div>
+
+				<div class="middlePictureTwo">
+					<img src="img/app/xiu9.gif">
+				</div>
+				<div style=" background-image: url(./img/timg3.gif);" class="BackgroundPicture">
+
+				</div>
+
+				<div class="middlePictureTwo">
+					<img src="img/app/xiu11.gif">
+				</div>
+				<div style="background-image: url(./img/timg4.jpg);" class="BackgroundPicture">
+
+				</div>
+
+				<div class="middlePictureTwo">
+					<img src="img/app/xiu11.gif">
+				</div>
+
+
+
+			</div>
+			<div class="recordsRome">
+				
+				<div class="toprecords">
+					
+				<div class="type">
+				<div class="typeTitle">
+						了解热门产品
+				</div>
+				<div class="typeA">
+				<a href="">Android</a>
+				<a href="">移动端web</a>
+				<a href="">PcWeb</a>
+				<a href="">Mac版</a>
+				</div>
+
+				</div>
+				<div class="category">
+				<div class="categoryUl">
+				 <p>qq安全</p>
+				 <ul>
+				 	<a href="">安全中心</a>
+				 	<a href="">冻结账号</a>
+				 	<a href="">举报恶意行为</a>
+				 	<a href="">是真的会举报</a>
+					<a href="">安全中心</a>
+					<a href="">冻结账号</a>
+					<a href="">举报恶意行为</a>
+					<a href="">是真的会举报</a>
+					<a href="">安全中心</a>
+					<a href="">冻结账号</a>
+					<a href="">举报恶意行为</a>
+					<a href="">是真的会举报</a>
+				 </ul>
+				
+				</div>	
+				
+			<div class="categoryUl">
+			 <p>qq安全</p>
+			 <ul>
+			 	<a href="">安全中心</a>
+			 	<a href="">冻结账号</a>
+			 	<a href="">举报恶意行为</a>
+			 	<a href="">是真的会举报</a>
+			 </ul>
+			
+			</div>	
+				
+		<div class="categoryUl">
+		 <p>qq安全</p>
+		 <ul>
+		 	<a href="">安全中心</a>
+		 	<a href="">冻结账号</a>
+		 	<a href="">举报恶意行为</a>
+		 	<a href="">是真的会举报</a>
+		 </ul>
+		
+		</div>	
+			  
+					
+
+				</div>
+				
+               </div>
+
+
+
+            <div class="records">
+				<p>Copyright © 1998-2020 Yuns. All Rights Reserved.</p>
+				<p>云饰网有限公司 版权所有</p>
+				
+			</div>
+
+
+			</div>
+			
+			
+
+		</div>
+
+
+
+
+
+
+	</body>
+	<script src="js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var mySwiper = new Swiper('.swiper-container', {
+			direction: 'horizontal', //horizontal vertical 垂直切换选项
+			loop: true, // 循环模式选项
+			// 如果需要分页器
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			// 如果需要前进后退按钮
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+
+		})
+
+		$(window).scroll(function() {
+			var scrollTop = $(this).scrollTop();
+			var scrollHeight = $(document).height();
+			var windowHeight = $(this).height();
+			console.log(scrollTop)
+			if (scrollTop > 799) {
+				$(".toplogo").css({
+					"background-color": "#fff",
+					"position": "fixed",
+					"top": "0"
+				})
+			} else {
+				$(".toplogo").css({
+					"background-color": "",
+					"position": "",
+				})
+			}
+			$(".cc").css("background-position-y", scrollTop / 150)
+			$(".ss").css("background-position-y", scrollTop / 150)
+			$(".dd").css("background-position-y", scrollTop / 150)
+		})
+	</script>
+</html>
