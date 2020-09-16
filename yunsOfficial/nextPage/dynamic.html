@@ -4,19 +4,558 @@
 		<meta charset="utf-8">
 		<title></title>
 	</head>
+	<link rel="stylesheet" type="text/css" href="../css/swiper-3.4.2.min.css" />
+	<script src="../js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
 	<style type="text/css">
-		
+		* {
+			margin: 0;
+			padding: 0;
+		}
+        
+		.TopBackground {
+			background-color: aqua;
+			width: 100%;
+			height: 45em;
+		}
+
+		.TopBackground img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.AllRome {
+			background-color: #eee;
+		}
+
+		.Content {
+			height: 1800px;
+			margin: 2rem auto;
+			/* background-color: #007AFF; */
+			width:1350px;
+			overflow: hidden;
+		}
+
+		.swiper-container {
+			width: 51.25em;
+			height: 23.75em;
+			float: left;
+			padding-bottom: 2.5em;
+		}
+
+		.circle {
+			display: flex;
+			background-color: #979797;
+			bottom: 1px !important;
+			height: 2.5em;
+		}
+
+		.circle span {
+			display: block;
+			width: 50%;
+		}
+
+		.swiper-pagination-bullet {
+			background-color: #e3e2e2;
+			margin: 0 !important;
+			opacity: 0.8;
+			height: 100%;
+			border-radius: 0;
+		}
+
+		.swiper-pagination-bullet-active {
+			background: #f7f6f6;
+			border-bottom: solid 1px #cea861;
+			opacity: 1;
+			color: #ab8e66;
+			text-align: center;
+			line-height: 2.5em;
+		}
+
+		.consult {
+			float: right;
+			width: 496px;
+			height: 25.95em;
+			margin-top: 10px;
+		}
+
+		.TopConsult {
+			height: 37px;
+			display: flex;
+			border-bottom: 1px solid #e0e2e2;
+		}
+
+		.TopConsult div {
+			font-size: 18px;
+			width: 50%;
+			color: #676767;
+			cursor: pointer;
+			text-align: center;
+		}
+
+		.ContentConsult li {
+			list-style: none;
+			border-bottom: 1px solid #e0e2e2;
+			padding: 11px 0;
+		}
+
+		.Headline {
+			width: 496px;
+			height: 65px;
+			overflow: hidden;
+			line-height: 65px;
+			text-align: center;
+			font-size: 22px;
+			font-weight: 700;
+			box-sizing: border-box;
+			padding: 0 12px !important;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			color: #0da0b4;
+		}
+
+		.ConsultHeadline {
+			width: 360px;
+			color: #424242;
+			font-size: 14px;
+			display: inline-block;
+			margin-left: 10px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			height: 100%;
+			line-height: 12px;
+
+		}
+
+		.type2 {
+			font-size: 12px;
+			color: #e9852d;
+			border: 1px #e9852d solid;
+			padding: 2px;
+		}
+
+		.type1 {
+			font-size: 12px;
+			color: #6388c5;
+			border: 1px #97afc5 solid;
+			padding: 2px;
+		}
+
+		.type3 {
+			font-size: 12px;
+			color: #bb9a6c;
+			border: 1px #c5ab86 solid;
+			padding: 2px;
+		}
+
+		.type4 {
+			font-size: 12px;
+			color: #69c5d2;
+			border: 1px #1da6ba solid;
+			padding: 2px;
+		}
+
+		.ConsultMore {
+			display: block;
+			width: 496px;
+			height: 40px;
+			background-color: #e3e2e2;
+			line-height: 40px;
+			text-align: center;
+			list-style: none;
+			text-decoration: none;
+		}
+
+		.c1 {
+			font-size: 14px;
+			color: #676767;
+		}
+
+		.c2 {
+			font-size: 14px;
+			color: #7ea1a6;
+		}
+
+		.pictrue {
+			width: 20px;
+			height: 12px;
+			display: inline-block;
+			background-image: url(../img/comm2.png);
+			background-size: 100%;
+		}
+
+		.Activity {
+			float: left;
+			margin-top: 30px;
+		}
+
+		.Activity_title {
+			border-left: solid 3px #1da6ba;
+			float: left;
+			padding-left: 10px;
+			color: #0b0b0b;
+			font-size: 24px;
+			font-weight: 400;
+		}
+
+		.Activity_type {
+			height: 37px;
+			display: flex;
+			border-bottom: 1px solid #e0e2e2;
+			line-height: 37px;
+			float: left;
+			width: 43.25em;
+			flex-direction: row;
+			margin-left: 20px;
+		}
+
+		.Activity_type div {
+			font-size: 16px;
+			color: #676767;
+			cursor: pointer;
+			text-align: center;
+			margin-right: 2em;
+		}
+
+		.ActivityBox {
+			width: 12.46em;
+			height: 17.375em;
+			background-color: #fefefe;
+			position: relative;
+			margin-right: 30px;
+		}
+
+		.ActivityContent {
+			width: 100%+1em;
+			float: left;
+			display: flex;
+			margin-top: 20px;
+		}
+
+		.ActivityImg {
+			width: 100%;
+			height: 12.93em;
+		}
+
+		.ActivityImg img {
+			width: 100%;
+		}
+
+		.ActivityIntroduce {
+			width: 100%;
+			overflow: hidden;
+			box-sizing: border-box;
+			padding: 6px 10px 4px 10px;
+			font-size: 14px;
+			color: #424242;
+			line-height: 18px;
+			text-align: left;
+		}
+
+		.ActivityTime {
+			position: absolute;
+			font-size: 12px;
+			color: #1da6ba;
+			left: 10px;
+			bottom: 6px;
+		}
+		.HotBrand {
+			float: left;
+			margin-top: 30px;
+			width: 100%;
+		}
+		.HotBrand_title{
+			border-left: solid 3px #1da6ba;
+			padding-left: 10px;
+			color: #0b0b0b;
+			font-size: 24px;
+			font-weight: 400;
+		}
+		.BrandType{
+			margin-top: 20px;
+		}
+		.BrandLeft{
+			background-color:salmon;
+			width: 253px;
+		    height:253px;
+			float: left;
+			margin-right: 30px;
+			overflow: hidden;
+		}
+		.BrandLeft img{
+			width: 100%;
+		}
+		.BrandRight{
+			float: right;
+			width:496px;
+			height: 267px;
+		}
+		.BrandRight1{
+			width:120px;
+			height: 120px;
+			background-color: #007AFF;
+			float: left;
+			margin-right: 4px;
+			margin-top: 9px;
+			overflow: hidden;
+		}
+		.BrandRight1 img{
+			width: 100%;
+		}
+		.BrandRightTop{
+			margin-top:0;
+		}
+		.BrandRightBottom{
+			margin-top:10px;
+		}
+		.production{
+			float: left;
+			margin-top: 30px;
+		}
+		.production_title{
+			border-left: solid 3px #1da6ba;
+			    float: left;
+			    padding-left: 10px;
+			    color: #0b0b0b;
+			    font-size: 24px;
+			    font-weight: 400;
+		}
+
 	</style>
 	<body>
-		<div class="allRome">
-		<div class="back">
+		<div class="AllRome">
+			<div class="TopBackground">
+				<img src="../img/app/xiu12.gif">
+			</div>
+			<div class="Content">
+				<!--新闻轮播-->
+				<div class="main">
+					
+				
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div style="background: transparent url(../img/app/xiu5.gif)no-repeat;background-size: cover;" class="swiper-slide">
+
+						</div>
+						<div style="background: transparent url(../img/app/xiu7.gif)no-repeat;background-size: cover;" class="swiper-slide">
+						</div>
+						<div style="background: transparent url(../img/app/xiu7.gif)no-repeat;background-size: cover;" class="swiper-slide">
+						</div>
+					</div>
+
+					<div class="swiper-pagination circle"></div>
+
+				</div>
+
+				<!-- 新闻咨询-->
+				<div class="consult">
+					<div class="TopConsult">
+						<div>综合</div>
+						<div>作品</div>
+						<div>公告</div>
+						<div>新闻</div>
+					</div>
+					<!-- 新闻内容 -->
+					<ul class="ContentConsult">
+						<li class="Headline">
+							虎牙直播主播带货专场来袭 限定周边精美皮肤等你来
+						</li>
+						<li>
+							<span class="type1">赛事</span>
+							<span class="ConsultHeadline">外援对职业化阿贾克斯电池</span>
+						</li>
+						<li>
+							<span class="type2">新闻</span>
+							<span class="ConsultHeadline">外援对职业化阿贾克斯电池</span>
+						</li>
+						<li>
+							<span class="type3">公告</span>
+							<span class="ConsultHeadline">外援对职业化阿贾克撒旦撒旦撒旦阿斯顿撒旦阿斯顿撒旦撒的撒撒旦撒打算打算斯电池</span>
+						</li>
+						<li>
+							<span class="type4">作品</span>
+							<span class="ConsultHeadline">外援对职业化阿贾克斯电池</span>
+						</li>
+						<li>
+							<span class="type1">赛事</span>
+							<span class="ConsultHeadline">外援对职业化阿贾克斯电池</span>
+						</li>
+						<li>
+							<span class="type1">赛事</span>
+							<span class="ConsultHeadline">外援对职业化阿贾克斯电池</span>
+						</li>
+
+					</ul>
+					<a class="ConsultMore" href="">
+						<span class="c1">阅读更多</span>
+						<span class="c2">最新资讯</span>
+						<i class="pictrue"></i>
+
+					</a>
+
+				</div>
+            </div>
+	          	<!-- 热门品牌 -->	
+					
+				<div class="HotBrand">
+					<div class="HotBrand_title">
+						热门品牌
+					</div>
+					<div class="BrandType">
+					<div class="BrandLeft">
+						<img src="https://yunshiwang.oss.yuns.net/upload/brands/2020-05/5ec79b70b96ee.png" >
+					</div>	
+					<div class="BrandLeft">
+						<img src="https://yunshiwang.oss.yuns.net/upload/brands/2020-05/5ecdc3a824022.png" >
+					</div>	
+					<div class="BrandLeft">
+						<img src="https://yunshiwang.oss.yuns.net/upload/brands/2020-08/5f2761d2451a7.jpg" >
+					</div>
+				   <div class="BrandRight">
+					  <div class="BrandRight1 BrandRightTop">
+					  	<img src="https://yunshiwang.oss.yuns.net/upload/brands/2020-09/5f602edd2e796.jpg" >
+					  </div> 
+					  <div class="BrandRight1 BrandRightTop">
+					  	<img src="https://yunshiwang.oss.yuns.net/upload/brands/2020-09/5f605efc52c14.jpg" >
+					  </div> 
+					  <div class="BrandRight1 BrandRightTop">
+					  	<img src="https://yunshiwang.oss.yuns.net/upload/brands/2020-08/5f4321e701478.jpg" >
+					  </div> 
+					  <div class="BrandRight1 BrandRightTop">
+					  	<img src="https://yunshiwang.oss.yuns.net/upload/brands/2020-08/5f423c266482a.jpg" >
+					  </div> 
+					  <div class="BrandRight1 BrandRightBottom">
+					  	<img src="https://yunshiwang.oss.yuns.net/upload/brands/2020-07/5f056a3b69a3e.jpg" >
+					  </div> 
+					  <div class="BrandRight1 BrandRightBottom">
+					  	<img src="https://yunshiwang.oss.yuns.net/upload/brands/2020-06/5ed457f66d6f7.png" >
+					  </div> 
+					  <div class="BrandRight1 BrandRightBottom">
+					  	<img src="https://yunshiwang.oss.yuns.net/upload/brands/2020-07/5f1ce5317ee07.jpg" >
+					  </div> 
+					  <div class="BrandRight1 BrandRightBottom">
+					 
+					  </div> 
+					   
+				   	
+				   </div>
+						
+					</div>
+					
+					
+					
+					
+				</div>	
+					
+					
+				
+				<!-- 热门活动-->
+				<div class="Activity">
+				
+					<div class="Activity_title">
+						热门活动
+					</div>
+					<div class="Activity_type">
+						<div>
+							正在进行
+						</div>
+						<div>
+							商城特惠
+						</div>
+						<div>
+							长期活动
+						</div>
+					</div>
+					<!-- 内容 -->
+					<div class="ActivityContent">
+						<div class="ActivityBox">
+							<div class="ActivityImg">
+								<img src="../img/app/xiu14.gif">
+							</div>
+							<p class="ActivityIntroduce">打什么阿斯顿</p>
+							<p class="ActivityTime">长期活动</p>
+						</div>
+						
+						<div class="ActivityBox">
+							<div class="ActivityImg">
+								<img src="../img/app/xiu15.gif">
+							</div>
+							<p class="ActivityIntroduce">打什么阿斯顿</p>
+							<p class="ActivityTime">长期活动</p>
+						</div>
+						<div class="ActivityBox">
+							<div class="ActivityImg">
+								<img src="../img/app/xiu15.gif">
+							</div>
+							<p class="ActivityIntroduce">打什么阿斯顿</p>
+							<p class="ActivityTime">长期活动</p>
+						</div>
+						<div class="ActivityBox">
+							<div class="ActivityImg">
+								<img src="../img/app/xiu15.gif">
+							</div>
+							<p class="ActivityIntroduce">打什么阿斯顿</p>
+							<p class="ActivityTime">长期活动</p>
+						</div>
+						<div class="ActivityBox">
+							<div class="ActivityImg">
+								<img src="../img/app/xiu15.gif">
+							</div>
+							<p class="ActivityIntroduce">打什么阿斯顿</p>
+							<p class="ActivityTime">长期活动</p>
+						</div>
+						<div class="ActivityBox">
+							<div class="ActivityImg">
+								<img src="../img/app/xiu16.gif">
+							</div>
+							<p class="ActivityIntroduce">打什么阿斯顿</p>
+							<p class="ActivityTime">长期活动</p>
+						</div>
+						
+					</div>
+				
+				</div>
+			<!-- 设计作品 -->
+					
+			<div class="production">
+			<div class="production_title">
+				热门活动
+			</div>
 			
-		</div>	
-			
-		
-		
-		
-			
+				
+			</div>		
+					
+					
+					
+
+
+			</div>
+
+
+
+
+
 		</div>
 	</body>
+	<script type="text/javascript">
+		var mySwiper = new Swiper('.swiper-container', {
+			direction: 'horizontal', //horizontal vertical 垂直切换选项
+			loop: true, // 循环模式选项
+			loopPreventsSlide: true,
+			// 如果需要分页器
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			// 如果需要前进后退按钮
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			// autoplay: {
+			//   delay: 2000,//1秒切换一次
+			//    },
+
+		})
+	</script>
 </html>
