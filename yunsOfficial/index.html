@@ -166,7 +166,6 @@
 			var scrollTop = $(this).scrollTop();
 			var scrollHeight = $(document).height();
 			var windowHeight = $(this).height();
-			console.log(scrollTop)
 			if (scrollTop > 799) {
 				$(".toplogo").css({
 					"background-color": "#fff",
@@ -183,5 +182,14 @@
 			$(".ss").css("background-position-y", scrollTop / 150)
 			$(".dd").css("background-position-y", scrollTop / 150)
 		})
+		$(".toplogo p").on("click",function(){
+			if($(this).text()=="动态"){
+				window.location.href="./nextPage/dynamic.html"
+			}
+			
+		})
+		
+		
+		
 	</script>
 </html>
