@@ -69,9 +69,10 @@
 }
 
 .circle {
-	background: transparent url(https://sqimg.qq.com/qq_product_operations/im/2018/linearbot.png) repeat-x left top;
+	background: transparent url(../img/linearbot.png) repeat-x left top;
 	bottom: 0 !important;
 	height: 50px;
+	width: 100%;
 }
 
 .middlePictureTwo img {

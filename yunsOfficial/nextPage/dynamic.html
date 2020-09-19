@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/dynamic.css"/>
 	<script src="../js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 	<body>
 		<div class="AllRome">
 			<!-- 最上切换首页logo等 -->
@@ -213,7 +213,12 @@
 								<img src="http://ysw-formal.qiniu.yuns.net/2020-03-06_5e621a044694e.jpg" >
 							</div>	
 						    <div class="productionRight2"></div>
-							<div class="productionRight3"></div>
+							<div class="productionRight3">
+							
+							</div>
+							<div class="MoreProduction">
+								点击查看更多作品
+							</div>
 							</div>
 							 
 							 
@@ -379,16 +384,12 @@
 			loop: true, // 循环模式选项
 			loopPreventsSlide: true,
 			// 如果需要分页器
-			pagination: '.swiper-pagination',
+			 pagination :{
+				el: '.swiper-pagination',
+				clickable :true,
+			  },
 			paginationClickable: true,
-			// 如果需要前进后退按钮
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			autoplay: 5000,
-			autoplayStopOnLast:true
-
+			autoplay: true,
 		})
 var mySwiper2 = new Swiper('.swiper-container2',{
   effect : 'coverflow',
@@ -402,8 +403,7 @@ var mySwiper2 = new Swiper('.swiper-container2',{
     modifier: 2,
     slideShadows : true
   },
-  autoplay: 4000,
-  autoplayStopOnLast:true
+  autoplay: true,
 })
 
 	</script>

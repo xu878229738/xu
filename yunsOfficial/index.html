@@ -6,6 +6,7 @@
 	</head>
 	<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
 	<script src="js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 	<link rel="stylesheet" type="text/css" href="./css/index.css" />
 	<body>
 		<div class="bottom">
@@ -50,15 +51,10 @@
 					<img src="img/app/xiu11.gif">
 				</div>
 				<div style="background-image: url(./img/timg4.jpg);" class="BackgroundPicture">
-
 				</div>
-
 				<div class="middlePictureTwo">
 					<img src="img/app/xiu11.gif">
 				</div>
-
-
-
 			</div>
 			<div class="recordsRome">
 				
@@ -98,6 +94,7 @@
 				
 			<div class="categoryUl">
 			 <p>qq安全</p>
+			 
 			 <ul>
 			 	<a href="">安全中心</a>
 			 	<a href="">冻结账号</a>
@@ -145,21 +142,16 @@
 
 
 	</body>
-	<script src="js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		var mySwiper = new Swiper('.swiper-container', {
 			 effect : 'fade',
 			direction: 'horizontal', //horizontal vertical 垂直切换选项
 			loop: true, // 循环模式选项
 			// 如果需要分页器
-			pagination: '.swiper-pagination',
-			paginationClickable: true,
-			// 如果需要前进后退按钮
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
+			pagination: {
+				el: '.swiper-pagination',
+				clickable :true,
 			},
-
 		})
 
 		$(window).scroll(function() {

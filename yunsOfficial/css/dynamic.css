@@ -446,10 +446,21 @@
 	right:0;
 	width:211px;
 	height:400px;
-	background-color:#6388C5;
+	background-image: url(../img/ccc.png);
+	background-size: 100%;
+	-webkit-filter: blur(10px);
 }
-
-
+.MoreProduction{
+	width: 211px;
+	height: 100%;
+	background-color: #6388C5;
+	line-height:400px;
+	text-align: center;
+	opacity: 0.8;
+	position: absolute;
+	right: 0;
+	color:#fff;
+}
 .recordsRome {
 	background-color: #000000;
 	width: 100%;
@@ -457,7 +468,6 @@
 	padding-top: 30px;
 	overflow: hidden;
 }
-
 .toprecords {
 	display:flex;
 	margin: 0 auto;
@@ -466,7 +476,6 @@
 	border-bottom:solid 1px #666;
 	margin-bottom: 20px;
 }
-
 .typeTitle {
 	color: #666;
 	font-size: 14px;
@@ -482,7 +491,6 @@
 	display:flex;
 	justify-content:space-around;
 	width: 560px;
-	
 }
 .categoryUl{
 margin-left: 10px;	
