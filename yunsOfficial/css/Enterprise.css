@@ -34,7 +34,7 @@
 }
 .EnterpriseTopLeft{
 	float: left;
-	margin-left:500px;
+	margin-left:800px;
 }
 .EnterpriseTop a img{
 	width:70px;
@@ -43,7 +43,49 @@
 position: relative;
 width: 100%;
 height: 100%;
-
 }
-
+.swiperStyle2{
+	width: 100%;
+	height: 100%;
+}
+.slide2{
+	background-size:cover;
+}
+.slide2>img{
+	display: block;
+	margin: 50px auto;
+}
+.details{
+	width: 100%;
+	height: 120px;
+	background-color:#2598bb;
+	position: absolute;
+	bottom: 0;
+	z-index: 10;
+	opacity: 0.9;
+	display: flex;
+	box-sizing: border-box;
+	padding-top: 15px;
+	
+}
+.detailsBox{
+	width: 33.3%;
+	height: 100%;
+	color: #FFFFFF;
+	display: flex;
+	box-sizing: border-box;
+	padding:0 50px;
+}
+.detailsBox img{
+      width: 50px;
+	  height: 50px;
+	  margin-right:10px;
+}
+.detailsTitle{
+	font-size: 16px;
+}
+.detailsText{
+	font-size:14px;
+	margin-top:5px;
+}
 	
